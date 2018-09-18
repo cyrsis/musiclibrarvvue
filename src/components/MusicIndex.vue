@@ -1,35 +1,50 @@
 <template>
 
-   <table class="table is-fullwidth is-striped is-hoverable is-narrow">
+  <table class="table is-fullwidth is-striped is-hoverable is-narrow">
 
-     <theader>
-       <th>Artist</th>
-       <th>Title</th>
-       <th>Album</th>
-       <th>Genre</th>
-     </theader>
+    <thead>
+    <th style="width: 30%;">Artist</th>
+    <th style="width: 30%;">Title</th>
+    <th style="width: 20%;">Album</th>
+    <th style="width: 20%;">Genre</th>
+    </thead>
 
-     <tbody v-for="(song,index) in songs" v-bind:key="index">
-     <tr>
-       <td>{{song.artist}}</td>
-       <td>{{song.title}}</td>
-       <td>{{song.album}}</td>
-       <td>{{song.genre}}</td>
-     </tr>
-     </tbody>
-   </table>
+    <tbody v-for="(song,index) in songs" v-bind:key="index">
+    <tr>
+      <td style="width: 30%;">{{song.artist}}</td>
+      <td style="width: 30%;">{{song.title}}</td>
+      <td style="width: 30%;">{{song.album}}</td>
+      <td style="width: 20%;">{{song.genre}}</td>
+    </tr>
+    </tbody>
+  </table>
 </template>
 
 <script>
 
   import Musicdata from '@/assets/list.json'
-    export default {
-        data (){
-          return{
-            songs:Musicdata
-          }
-        }
-    }
+
+  export default {
+
+
+
+
+    data() {
+      return {
+        songs: Musicdata,
+        sortBy: '',
+        sortDirection: 'asc'
+
+      }
+    },
+
+    methods: {
+      filter_songs() {
+
+      }
+    },
+
+  }
 </script>
 
 <style scoped>

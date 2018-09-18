@@ -2,6 +2,12 @@
 
 > Music with Vue
 
+## Working with Vue in sonic speed in Vue
+
+Adding lot of things in Vue with front end and back end
+
+
+
 ## Build Setup
 
 ``` bash
